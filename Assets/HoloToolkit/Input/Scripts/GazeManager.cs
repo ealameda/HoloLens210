@@ -42,7 +42,7 @@ public class GazeManager : Singleton<GazeManager>
         /* TODO: DEVELOPER CODING EXERCISE 3.a */
 
         // 3.a: GetComponent GazeStabilizer and assign it to gazeStabilizer.
-       // gazeStabilizer = GetComponent<GazeStabilizer>();
+       gazeStabilizer = GetComponent<GazeStabilizer>();
         
     }
 
@@ -56,12 +56,12 @@ public class GazeManager : Singleton<GazeManager>
 
         // 3.a: Using gazeStabilizer, call function UpdateHeadStability.
         // Pass in gazeOrigin and Camera's main transform rotation.
-        //gazeStabilizer.UpdateHeadStability(gazeOrigin, Camera.main.transform.rotation);
+       gazeStabilizer.UpdateHeadStability(gazeOrigin, Camera.main.transform.rotation);
 
 
         // 3.a: Using gazeStabilizer, get the StableHeadPosition and
         // assign it to gazeOrigin.
-        //gazeOrigin = gazeStabilizer.StableHeadPosition;
+       gazeOrigin = gazeStabilizer.StableHeadPosition;
         
 
         UpdateRaycast();
